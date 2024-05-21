@@ -1,0 +1,80 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+.galery__pictures{
+  width: 100%;
+  height: auto;
+  padding-bottom: 2.8125rem;
+  background-color: var(--color_ligth);
+
+  .galery__pictures-content-nav{
+    width: 100%;
+    padding: 0.825rem;
+    height: auto;
+    background-color: rgb(250, 252, 252);
+
+    .galery__pictures-nav{
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+
+      .galery__pictures-nav-lnk{
+        transition: color .3s ease-in;
+        color: #000000c6;
+        &:first-child{
+          .galery__pictures-nav-item{
+            &::after{
+              content: "";
+              height: 1.0625rem;
+              width: 1.0625rem;
+              background: url('./../../../../../public/assets/img/resources/arrow-right-4152689.svg') center / cover;
+              
+            }
+          }
+        }
+
+        &:hover{
+          color: var(--indigo);
+        }
+        .galery__pictures-nav-item{
+          display: flex;
+          gap: 0.625rem;
+          align-items: center;
+
+          .galery__pictures-nav-item-name{
+            font-size: 1.0625rem;
+          }
+        }
+      }
+    }
+  } 
+
+  .galery__pictures-content-title{
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    background: #f8f9fa;
+    margin-bottom: 2.8125rem;
+    border-bottom: 2px solid var(--indigo);
+    color: rgba(0, 0, 0, 0.86);
+
+    display: flex;
+    align-items: center;
+    gap: 0.3125rem;
+
+    .galery__pictures-title-icon{
+      font-size: 1.75rem;
+    }
+    .galery__pictures-title{
+      font-size: 1.6875rem;
+      font-weight: 400;
+    }
+  }
+
+  .galery__pictures-group{
+    width: 80%;
+    margin: 0 auto;
+    filter: drop-shadow(0.625rem 0.625rem 3.8125rem #0000008f);
+    -webkit-filter: drop-shadow(0.625rem 0.625rem 3.8125rem #0000008f);
+    -moz-filter: drop-shadow(0.625rem 0.625rem 3.8125rem #0000008f);
+  }
+
+}

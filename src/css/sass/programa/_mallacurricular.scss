@@ -1,0 +1,313 @@
+@import './../responsive';
+
+$transitin: all .3s;
+$widthTabs: 110px;
+$primary: #636983;
+$success: #51a14c;
+$default: #525252;
+$warning: #b12222;
+$turquese: #108273;
+
+@function calcLeft($numTab, $width) {
+  @return ($numTab - 1) * ( $width + 3 );
+}
+
+@mixin tabSuccess {
+  & + label {
+    color: $success;
+  }
+  & ~ .glider {
+    background: linear-gradient(90deg, #51a14c 0%, #10c33e 100%);
+    box-shadow: 0rem 0rem 0.5rem 0rem rgb(47 187 12 / 62%);
+  }
+}
+
+@mixin tabDefault {
+  & + label {
+    color: $default;
+  }
+  & ~ .glider {
+    background: linear-gradient(90deg, #4a4a4a 0%, #9b9b9b 100%);
+  }
+}
+
+@mixin tabWarning {
+  & + label {
+    color: $warning;
+  }
+  & ~ .glider {
+    background: linear-gradient(90deg, #b93232 0%, #ff5d5d 100%);
+    box-shadow: 0rem 0rem 0.5rem 0rem rgb(231 13 93 / 57%);
+  }
+}
+
+@mixin tabTurquese {
+  & + label {
+    color: $turquese;
+  }
+  & ~ .glider {
+    background: linear-gradient(90deg, #3ce3cd 0%, #138f98 100%);
+    box-shadow: 0rem 0rem 0.5rem 0rem rgb(13 231 231 / 57%);
+  }
+}
+
+.programa__mallacurricular{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  // border-left-color: #2D00F7;
+  
+  .programa__mallacurricular-content-titulo{
+    width: 100%;
+    margin-bottom: 0.8125rem;
+  }
+  .programa__mallacurricular-content-descripcion{
+    width: 100%;
+    height: 56.875rem;
+    @include small-mobil{
+      height: 76.875rem;
+    }
+    .programa__mallacurricular-card{
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      box-shadow: 0rem 0rem 0.25rem 0rem rgb(230, 235, 235);
+      .programa__mallacurricular-card-content{
+        width: 100%;
+        height: 100%; 
+        text-align: left;
+        font-size: 1.0625rem;
+        line-height: 1.25rem;
+        &::after{
+          content: "";
+          width: 100%;
+          height: 0.125rem;
+          border-bottom: 0.0625rem solid #dfe4e4;
+          position: absolute;
+        }
+        .item{
+          opacity: 0;
+          visibility: hidden;
+          transition: $transitin;
+          position: absolute;
+          padding: 0.625rem 1.25rem;
+          width: 100%;
+          height: auto;
+          .programa__mallacurricular-title-modulo{
+            font-size: 1.4375rem;
+            font-weight: 500;
+            @include small-mobil{
+              font-size: 1.0375rem;
+            }
+            @include mobil{
+              font-size: 1.0375rem;
+            }
+          }
+          .programa__mallacurricular-unidad-content-table{
+            width: 100%;
+            height: auto;
+            .programa__mallacurricular-unidad-table{
+              width: 100%;
+              border-collapse: collapse;
+              & tr > td{
+                padding: 0.625rem 0.625rem;
+                font-size: 0.875rem;
+                @include small-mobil{
+                  padding: 0.425rem 0.505rem;
+                  font-size: 0.675rem;
+                  line-height: 1rem;
+                }
+                @include mobil{
+                  padding: 0.425rem 0.505rem;
+                  font-size: 0.675rem;
+                }
+              }
+              .programa__mallacurricular-unidad-table-title{
+                & td{
+                  background-color: #f4f6f4;
+                  font-size: 1.0625rem;
+                  font-weight: 500;
+                  width: 100%;
+                  @include small-mobil{
+                    font-size: 0.7625rem;
+                  }
+                  @include mobil{
+                    font-size: 0.7625rem;
+                  }
+                  & .programa__mallacurricular-unidad-semestre{
+                    background-color:var(--indigo);
+                    padding: 0.3125rem 1.25rem;
+                    border-radius: 0.9375rem;
+                    font-size: 0.75rem;
+                    color: var(--color_ligth);
+                    font-weight: 500;
+
+                    @include small-mobil{
+                      padding: 0.3125rem 0.95rem;
+                      font-size: 0.65rem;
+                    }
+                    @include mobil{
+                      padding: 0.3125rem 0.95rem;
+                      font-size: 0.65rem;
+                    }
+                  }
+                  &:nth-child(1){
+                    width: 100%;
+                  }
+                }
+              }
+              
+              & .programa__mallacurricular-unidad-table-title:nth-child(1){
+                border-bottom: 0.0313rem solid #d0cfec;
+                & > td{
+                  background-color: #f3f3f876;
+                }
+              }
+              
+              .programa__mallacurricular-unidad-table-data {
+                & > td{
+                  &:nth-child(1){
+                    width: 5%;
+                  }
+                  &:nth-child(2){
+                    width: 95%;
+                  }
+                }
+                &:nth-child(even){
+                  background-color: #fff;
+                  border-bottom: 0.0625rem solid #ebebeb;
+                  border-top: #ebebeb 0.0625rem solid;
+                }
+                &:nth-child(odd){
+                  background-color: #c4c4c41a;
+                  border-bottom: 0.0625rem solid #ebebeb;
+                  border-top: #ebebeb 0.0625rem solid;
+                }
+              }
+            }
+          }
+        }
+        h3{
+          font-weight: 500;
+          text-align: center;
+          margin: 1rem 0;
+          color: #333534;
+          line-height: 1.5625rem;
+        }
+      }
+      .programa__mallacurricular-competencias{
+        margin: 0.625rem;
+        width: 98%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 0.625rem 1.25rem;
+        border: 0.0625rem solid #b5ccba;
+        border-radius: 0.9375rem;
+        box-shadow: 0.125rem 0.125rem 0.3125rem 0.125rem #d6dedd;
+        .programa__mallacurricular-competencias-content{
+          margin: 0.5rem 0;
+          .programa__mallacurricular-competencias-content-icon{
+            background-color: var(--color_primary);
+            padding: 0.125rem 0.1563rem;
+            margin-right: 0.3125rem;
+          }
+          &:nth-child(1) .programa__mallacurricular-competencias-content-icon{
+            background-color: #01DF01;
+          }
+          &:nth-child(2) .programa__mallacurricular-competencias-content-icon{
+            background-color: #FFBF00;
+          }
+          &:nth-child(3) .programa__mallacurricular-competencias-content-icon{
+            background-color: #0000FF;
+          }
+          .programa__mallacurricular-competencias-content-descripcion{
+            font-size: 0.9375rem;
+            font-weight: 400;
+            color: #333534;
+          }
+        }
+      }
+    }
+    .programa__mallacurricular-tabs{
+      text-align: left;
+      position: relative;
+      input{
+        position: absolute;
+        opacity: 0;
+        margin: 0;
+        padding: 0;
+      }
+      input + label{
+        font-weight: 400;
+        color: rgb(39, 47, 83);
+        margin: 0.625rem 0;
+        width: 6.875rem;
+        cursor: pointer;
+        display:inline-block;
+        transition: $transitin;
+        text-align: center;
+        font-size: 1.0625rem;
+        border: none;
+        @include small-mobil{
+          // width: 4.875rem;
+          font-size:0.7625rem;
+        }
+        &:hover{
+          color: var(--color_primary);
+        }
+      }
+    }
+    
+    .glider{
+      width: 6.875rem;
+      height: 0.1875rem;
+      background: linear-gradient(90deg, rgba(91,60,196,1) 0%, rgba(60,108,196,1) 100%);
+      border-radius: 0.1875rem;
+      position: absolute;
+      box-shadow: 0rem 0rem 0.5rem 0rem rgba(91, 60, 196, 0.4);
+      transition: $transitin;
+    }
+  }
+}
+
+#tab-1:checked ~ .glider{
+  left: calcLeft(1, $widthTabs);
+}
+
+#tab-2:checked{
+  @include tabSuccess;
+  & ~ .glider {
+    left: calcLeft(2, $widthTabs);
+  } 
+}
+
+#tab-3:checked{
+  @include tabDefault;
+  & ~ .glider {
+    left: calcLeft(3, $widthTabs);
+  } 
+}
+
+#tab-4:checked{
+  @include tabWarning;
+  & ~ .glider {
+    left: calcLeft(4, $widthTabs);
+  } 
+}
+
+#tab-5:checked{
+  @include tabTurquese;
+  & ~ .glider {
+    left: calcLeft(5, $widthTabs);
+  } 
+}
+
+#tab-1:checked ~ section #content-1,
+#tab-2:checked ~ section #content-2,
+#tab-3:checked ~ section #content-3,
+#tab-4:checked ~ section #content-4,
+#tab-5:checked ~ section #content-5 {
+  opacity: 1;
+  visibility: visible;
+}

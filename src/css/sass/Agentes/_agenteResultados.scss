@@ -1,0 +1,18 @@
+.galery__albun-result{
+  width: 100%;
+  height: 28.125rem;
+  background: #ece9e638; 
+  box-shadow: rgba(149, 157, 165, 0.2) 0rem 0.5rem 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3125rem;
+
+  .galery__albun-result-title{
+    font-size: 1.375rem;
+    font-weight: 400;
+    color: #242424;
+  }
+}

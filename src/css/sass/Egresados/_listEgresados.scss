@@ -1,0 +1,87 @@
+.list__egresados{
+  width: 100%;
+  height: 100%;
+  background-color: var(--color_ligth);
+  padding: 1.5625rem 0;
+
+  .list__egresados-cards{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5625rem;
+    .list__egresados-card{
+      width: 100%;
+      height: auto;
+      background-color: var(--color_ligth);
+      padding: 0.625rem 0.9375rem;
+      border-radius: 0.625rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.4375rem 1.8125rem 0rem;
+
+      display: flex;
+      gap: 0.9375rem;
+      transition: all .3s ease-in;
+      opacity: 0;
+      &:hover{
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
+        transform: scale(1.02);
+      }
+      .list__egresados-card-left{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .list__egresados-card-left-img-content{
+          width: 150px;
+          height: 150px;
+          .list__egresados-card-left-img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transition: all .2s ease-in-out;
+            &:hover{
+              transform: scale(1.02);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .list__egresados-card-rigth{
+        width: 100%;
+        height: 100%;
+        padding: 0.625rem 1.25rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        .list__egresados-card-rigth-egresado{
+          font-weight: 400;
+          color: var(--blue);
+          font-size: 1.375rem;
+        }
+        .list__egresados-card-rigth-cargo{
+          font-weight: 400;
+          margin-bottom: 0.625rem;
+          color: #0f1a54;
+          font-size: 1.02rem;
+        }
+        .list__egresados-card-rigth-experiencia{
+          line-height: 1.375rem;
+          color: #423c3c;
+          font-size: 1.05rem;
+          text-align: center;
+          .list__egresados-card-rigth-experiencia-programa{
+            color: var(--danger);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

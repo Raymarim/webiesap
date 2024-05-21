@@ -1,0 +1,30 @@
+.programa__beneficios{
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  // border-left-color: #BC00DD;
+  // background: #f4f8f2;
+  .programa__beneficios-content-titulo{
+    width: 100%;
+    margin-bottom: 0.8125rem;
+  }
+  .programa__beneficios-descripcion{
+    width: 100%;
+    .programa__beneficios-lista{
+      .programa__beneficios-lista-children{
+        margin-bottom: 3px;
+        line-height: 1.4375rem;
+        font-size: 1.0625rem;
+      }
+      .programa__beneficios-lista-certificaciones{
+        padding: 5px 0 0;
+        margin-left: 15px;
+        .programa__beneficios-lista-certificaciones-children{
+          margin-bottom: 3px;
+          line-height: 1.4375rem;
+          font-size: 1.0625rem;
+        }
+      }
+    }
+  }
+}

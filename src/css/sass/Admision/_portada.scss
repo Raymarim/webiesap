@@ -1,0 +1,224 @@
+.admision__form{
+  background: #FF416C;
+  background: url('./../../../../public/assets/img/admision/312602497_5744479415619744_6409290775734884119_n.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  height: auto;
+  padding: 0.9375rem 0;
+  position: relative;
+  &::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(29, 29, 29, 0.76) 0%,  rgba(165, 47, 47, 0.004) 100%, rgba(81, 77, 77, 0.716) 51%);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .admision__form-descripcion-container{
+    width: 100%;
+    height: 28.125rem;
+    padding-bottom: 1.5625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 0.3125rem;
+    position: relative;
+    .admision__form-descripcion-informes{
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--color_ligth);
+      
+    }
+    .admision__form-descripcion-programas{
+      font-size: 2.625rem;
+      color: #06f0a2;
+      text-shadow: 0.125rem 0.125rem 0.25rem rgb(14, 13, 13);
+    }
+    .admision__form-descripcion-content-exito{
+      width: 100%;
+      height: 3.4375rem;
+      padding-top: 0.3125rem;
+      margin: 0.625rem 0;
+      border-bottom: 0.125rem solid var(--color_ligth);
+      display: flex;
+      align-items: center;
+      .admision__form-descripcion-exito{
+        font-size: 1.5625rem;
+        font-weight: 700;
+        color: #f0eced;
+      }
+    }
+
+    .admision__form-descripcion-lid{
+      font-size: 1.375rem;
+      color: var(--color_ligth);
+      font-weight: 300;
+    }
+  }
+
+  // .admision__form-container{
+  //   width: 100%;
+  //   height: auto;
+  //   background-color: var(--color_ligth);
+  //   border-radius: 0.3125rem;
+  //   box-shadow: rgba(246, 246, 249, 0.515) 0rem 0.4375rem 1.8125rem 0rem;
+
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: flex-start;
+  //   align-items: center;
+  //   gap: 0.3125rem;
+  //   position: relative;
+  //   .admision__form-info{ 
+  //     width: 100%;
+  //     height: 4.6875rem;
+  //     background-color: var(--indigo);  
+
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //     gap: 0.125rem;
+
+  //     .admision__form-info-title{
+  //       color: var(--color_ligth);
+  //       font-weight: 400;
+  //       font-size: 1.4375rem;
+  //     }
+
+  //     .admision__form-info-des{
+  //       color: var(--color_ligth);
+  //       font-weight: 300;
+  //     }
+  //   }
+
+  //   .admision__form-send{
+  //     width: 100%;
+  //     padding: 0.625rem 1.5625rem;
+
+  //     display: flex;
+  //     flex-direction: column;
+  //     gap: 1.125rem;
+
+  //     .admision__form-send-group{
+  //       width: 100%;
+  //       display: flex;
+  //       flex-direction: column;
+  //       gap: 0.3125rem; 
+
+  //       .admision__form-send-group-label{
+  //         font-size: 1rem;
+  //         font-weight: 400;
+  //         color: rgba(0, 0, 24, 0.84);
+  //         letter-spacing: 0.0187rem;
+  //       }
+
+  //       .admision__form-send-group-input{
+  //         outline: none;
+  //         border-radius: 0.625rem;
+  //         padding: 0.625rem 1.25rem;
+  //         color: rgba(0, 0, 24, 0.707);
+  //         border: 0.0313rem solid rgba(0, 0, 0, 0.244);
+  //         font-size: 0.9375rem;
+          
+  //         &:focus{
+  //           color: rgba(19, 19, 239, 0.707);
+  //           border: 0.0313rem solid rgba(19, 19, 239, 0.707);
+  //           transition: border .2s ease-in;
+  //         }
+          
+  //       }
+
+  //       .admision__form-input-uppercase{
+  //         text-transform: uppercase;
+  //       }
+  //       .admision__form-send-group-select{
+  //         width: 100%;
+  //         padding: 0.625rem 0.9375rem;
+  //         border-radius: 0.625rem;
+  //         border: 0.0313rem solid rgba(0, 0, 0, 0.244);
+  //         color: rgba(14, 14, 15, 0.985);
+  //         font-size: 0.9375rem;
+
+  //         & > option{
+  //           color: rgb(12, 12, 12);
+  //           border-radius: 0.9375rem;
+  //         }
+  //       }
+
+  //       .admision__form-send-group-error{
+  //         color: #e42b56;
+  //         font-size: 0.875rem;
+  //         font-weight: 400;
+  //       }
+  //     }
+
+  //     .admision__form-send-container-btn{
+  //       width: 100%;
+  //       height: 2.8125rem; 
+        
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       .admision__form-send-btn{
+  //         padding: 0.5rem 3.75rem;
+  //         border-radius: 0.5rem;
+  //         border: none;
+  //         font-size: 1.0625rem;
+  //         cursor: pointer;
+  //         background: #FF416C;
+  //         color: var(--color_ligth);
+  //         &:hover{
+  //           background: #e42b56;
+  //           transition: background .2s ease-in-out;
+  //         }
+  //       }
+  //     }
+  //     .admision__form-send-group-success{
+  //       width: 100%;
+  //       height: 1.75rem;
+  //       background-color: #faf5f6;
+  //       color: var(--success);
+
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       gap: 0.3125rem;
+  //     }
+  //   }
+
+  //   .admision__form-container-whatsap{
+  //     width: 5rem;
+  //     height: 5rem;
+  //     position: absolute;
+  //     top: -0.8125rem;
+  //     right: -3.4375rem;
+
+  //     .admision__form-whatsap{
+  //       width:3.125rem;
+  //       height: 3.125rem;
+  //       border-radius: 50%;
+  //       background-color: #06f0a2;
+
+  //       display: grid;
+  //       place-items: center;
+        
+  //       &:hover{
+  //         .admision__form-whatsap-icon{
+  //           transform: rotate(30deg);
+  //         }
+  //       }
+  //       .admision__form-whatsap-icon{
+  //         font-size: 1.75rem;
+  //         color: var(--color_ligth);
+  //         transition: transform .3s ease-in-out;
+  //       }
+  //     }
+  //   }
+  // }
+}

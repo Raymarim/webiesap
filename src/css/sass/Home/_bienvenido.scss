@@ -1,0 +1,89 @@
+@import './../responsive';
+
+.home__bienvenido{
+  background-color: var(--color_ligth);
+  width: 100%;
+  // padding: 20px 0;
+  .home__bienvenido-content-titulo{
+    width: 100%;
+    height: auto;
+    padding: 1.5625rem 0;
+    text-align: center;
+    .home__bienvenido-titulo{
+      font-size: 2.5625rem;
+      font-weight: bold;
+      margin-bottom: 0.625rem;
+      color: #2f2e2e;
+      text-shadow: 0.125rem 0.125rem 0.3125rem #cfcccc;
+      .home__bienvenido-iesap{
+        color: var(--color_primary);
+      }
+      .home__bienvenido-sede{
+        border-bottom: 0.25rem solid var(--color_primary);
+      }
+    }
+    .home__bienvenido-subtitulo{
+      font-size: 1.3125rem;
+      font-weight: 500;
+    }
+  }
+  .home__bienvenido-map{
+    width: 100%;
+    height: 100%;
+    .home__bienvenido-map_content{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .home__bienvenido-map-filiales{
+        width: 100%;
+        .home__bienvenido-map-link{
+          width: 100%;
+          height: 3.75rem;
+          background-color: var(--color_primary);
+          padding: 0.625rem 1.25rem;
+          display: flex;
+          align-items: center;
+          margin-bottom: 0.625rem;
+          position: relative;
+          overflow: hidden;
+          &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: var(--color_secondary);
+            position: absolute;
+            top: 0;
+            left: -18.75rem;
+            transition: all .3s ease;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            transition: all .3s ease-in-out;
+          }
+          &:hover::after{
+            left: -2.5rem;
+          }
+          .home__bienvenido-map-link-titulo{
+            color: var(--color_ligth);
+            font-size: 1.4375rem;
+            z-index: 9;
+          }
+        }
+      }
+    }
+    .home__bienvenido-map-content-img{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .home__bienvenido-map-div-img{
+        vertical-align: top;
+        .home__bienvenido-map-img{
+          width: 100%;
+          height: 21.875rem;
+          &:hover{
+            transform: scaleY(1);
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

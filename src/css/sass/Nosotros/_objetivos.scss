@@ -1,0 +1,109 @@
+.nosotros__content-objetivos{
+  width: 100%;
+  height: auto;
+  padding: 1.25rem 0;
+  background-color: var(--color_ligth);
+  .nosotros__objetivos-card{
+    width: 100%;
+    min-height: 19.375rem;
+    border-radius: 1.5625rem;
+    padding: 1.5625rem 1.875rem;
+    box-shadow: 0.625rem 0.625rem 3.125rem 0.1875rem rgba(39, 92, 141, 0.1);
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color_ligth);
+    transition: all .4s ease;
+    opacity: 0;
+    &:hover{
+      cursor: pointer;
+      &::after{
+        background-color: var(--color_primary);
+      }
+      .nosotros__objetivos-card-titulo{
+        color: var(--color_primary);
+      }
+      .nosotros__objetivos-card-descripcion{
+        color: #0c0c0c;
+      }
+      .nosotros__objetivos-card-content-icon{
+        .nosotros__objetivos-card-icon{
+          color: #a39fa43e;
+          transition: all .4s ease;
+        }
+        
+      }
+      .nosotros__objetivos-card-lista{
+        .nosotros__objetivos-card-lista-childrem{
+          .nosotros__objetivos-card-lista-text{
+            color: #0c0c0c;
+          }
+        }
+      }
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: -4.6875rem;
+      right: -4.6875rem;
+      background-color: #882020;
+      width: 9.375rem;
+      height: 9.375rem;
+      border-radius: 50%;
+ 
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -3.75rem;
+      right: -3.75rem;
+      background-color: #ae1b1b;
+      width: 7.5rem;
+      height: 7.5rem;
+      border-radius: 50%;
+      transition: .4s ease-in;
+    }
+    .nosotros__objetivos-card-titulo{
+      font-size: 1.875rem;
+      font-weight: 400;
+      color: var(--darck);
+      margin-bottom: 0.625rem;
+      border-bottom: 0.1875rem solid var(--color_primary);
+      transition: .4s ease-in;
+    }
+    .nosotros__objetivos-card-descripcion{
+      line-height: 1.5625rem;
+      text-align: justify;
+      color: #584a4a;
+      transition: .4s ease-in;
+      &::first-letter{
+        color: var(--color_primary);
+        font-size: 1.5625rem;
+        margin: 0.0625rem;
+      }
+    }
+    .nosotros__objetivos-card-content-icon{
+      position: absolute;
+      top: calc(50% - 3.4375rem);
+      left: calc(50% - 3.4375rem);
+      .nosotros__objetivos-card-icon{
+        font-size: 3.4375rem;
+        color: #68656517;
+        
+      }
+      
+    }
+    .nosotros__objetivos-card-lista{
+      margin: 0;
+      padding-left: 0.625rem;
+      .nosotros__objetivos-card-lista-childrem{
+        margin: 0;
+        list-style: none;
+        margin-bottom: 0.3125rem;
+        .nosotros__objetivos-card-lista-text{
+          color: #584a4a;
+          transition: .4s ease-in;
+        }
+      }
+    }
+  }
+}

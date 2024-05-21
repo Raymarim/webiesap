@@ -1,0 +1,59 @@
+@import 'banner';
+
+.programa__descripcion{
+  width: 100%;
+  height: auto;
+  padding: 10px 15px;
+  .programa__descripcion-matriculate{
+    width: 290px;
+    height: auto;
+    padding: 10px 30px;
+    background-color: var(--color_primary);
+    margin-bottom: 15px;
+    &:hover{
+      background: #8E2DE2;
+      background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2); 
+      background: linear-gradient(to right, #4A00E0, #8E2DE2);
+      transition: 2s ease-in-out;
+    }
+    .programa__descripcion-titulo{
+      color: var(--color_ligth);
+      font-size: 24px;
+      font-weight: 400;
+    }
+  }
+}
+
+.programa__descripcion-card{
+  padding: 20px 20px;
+  border-left: 15px solid #2a2a2a;
+  border-left-color: #d10026;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background: #FAFAFF;
+  color: #262d47;
+  box-shadow: 3px 3px 4px rgb(236, 233, 233);
+}
+
+.programa__descripcion-card-titulo{
+  font-size: 1.75rem;
+  font-weight: 500; 
+  border-bottom: 2px solid var(--color_primary);
+  
+}
+
+@import 'acercade';
+
+@import 'servicio';
+
+@import 'beneficios';
+
+@import 'requisitos';
+
+@import 'inversion';
+
+@import 'horarios';
+
+@import 'lugarTrabajo';
+
+@import 'mallacurricular';

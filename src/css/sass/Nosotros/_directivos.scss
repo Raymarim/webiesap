@@ -1,0 +1,99 @@
+@import './../responsive';
+
+.nosotros__directivos{
+  width: 100%;
+  height: auto;
+  padding: 0.9375rem 0;
+  // background-color: var(--color_ligth);
+  // background: rgb(172,190,189);
+  // background: linear-gradient(345deg, rgba(172, 190, 189, 0.671) 0%, rgba(236, 236, 244, 0.622) 50%, rgba(196, 187, 188, 0.184) 100%),url('./../../../../public/assets/img/nosotros/history.jpg');
+  // background: url('./../../../../public/assets/img/nosotros/history.jpg');
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  .nosotros__directivos-titulo{
+    width: 100%;
+    margin-bottom: 0.625rem;
+  }
+  .nosotros__directivos-card{
+    opacity: 0;
+    width: 100%;
+    max-height: 21.375rem;
+    position: relative;
+    transition: all 800ms 200ms ease-out;
+    overflow: hidden;
+    box-shadow: 0.25rem 0.25rem 0.625rem rgb(228, 233, 228);
+    &::after{
+      content: 'IESAP';
+      top: 0;
+      left: 0;
+      width: 4.25rem;
+      height: 2.25rem;
+      position: absolute;
+      background-color: #2a2a2ac0;
+      color: var(--color_ligth);
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0.125rem 0.125rem 0.625rem rgb(184, 180, 178);
+      clip-path: polygon(0 0, 75% 0, 100% 100%, 20% 100%);
+      transition: .3s ease-in-out;
+    }
+    &:hover{
+      cursor: pointer;
+      transition: .3s ease-in-out;
+      .nosotros__directivos-card-descripcion{
+        background-color: var(--color_primary);
+        transition: .3s ease-in-out;
+      }
+      &::after{
+        background-color: var(--color_primary);
+        transition: .3s ease-in-out;
+      }
+    }
+    .nosotros__directivos-card-content-img{
+      width: 100%;
+      height: 100%;
+      .nosotros__directivos-card-img{
+        width: 100%;
+        height: 100%;
+        // z-index: 55;
+      }
+    }
+    .nosotros__directivos-card-descripcion{
+      min-height: 6.625rem;
+      max-height: 6.625rem;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #2a2a2ac0;
+      padding: 0.625rem 2.9375rem;
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      transition: all .3s ease-in-out;
+      .nosotros__directivos-card-datos{
+        max-width: 15.625rem;
+        min-height: 1.875rem;
+        color: var(--color_ligth);
+        font-weight: 500;
+        font-size: 1.0525rem;
+        margin-left: 1.625rem;
+        margin-bottom: 0.25rem;
+        text-align: center;
+        @include desktop{
+          text-align: left;
+          font-size: 1.0225rem;
+        }
+      }
+      .nosotros__directivos-card-cargo{
+        min-height: 1.25rem;
+        color: var(--color_ligth);
+        font-weight: 300;
+        font-size: 0.8375rem;
+        width: 200px;
+        text-align: center;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,124 @@
+@import './../responsive';
+
+.home__video{
+  width: 100%;
+  height: auto;
+  padding: 1.5625rem 0;
+  background: #0F2027;
+  background: url('./../../../../public/assets/img/home/51838830_2187266891341032_7824122793338863616_n.jpg') no-repeat; 
+  background-size: cover;
+  background-size: 100%;
+  @include small-mobil{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .home__video-left{
+    width: 23.4375rem;
+    height: 23.4375rem;
+    padding: 0.3125rem;
+    background-color: #f3f0f1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0rem 0.625rem 2.25rem 0rem, rgba(0, 0, 0, 0.06) 0rem 0rem 0rem 0.0625rem;
+    @include small-mobil{
+      width: 13.125rem;
+      height: 13.125rem;
+      text-align: center;
+      transform: translateX(4.0625rem);
+    }
+    @include mobil{
+      width: 13.125rem;
+      height: 13.125rem;
+      text-align: center;
+      transform: translateX(4.0625rem);
+    }
+    @include tablet{
+      width: 13.125rem;
+      height: 13.125rem;
+    }
+    @include desktop{
+      width: 18.125rem;
+      height: 18.125rem;
+    }
+    .home__video-left-icon{
+      font-size: 4.6875rem;
+      @include small-mobil{
+        font-size: 2.1875rem;
+      }
+      @include mobil{
+        font-size: 2.1875rem;
+      }
+      @include tablet{
+        font-size: 2.1875rem;
+      }
+      @include desktop{
+        font-size: 3.4375rem;
+      }
+    }
+    .home__video-left-title{
+      font-size: 2.4375rem;
+      padding: 0;
+      margin-bottom: 0.625rem;
+      @include small-mobil{
+        font-size: 1.25rem;
+      }
+      @include mobil{
+        font-size: 1.25rem;
+      }
+      @include tablet{
+        font-size: 1.25rem;
+      }
+      @include desktop{
+        font-size: 1.75rem;
+      }
+      .home__video-left-title-exito{
+        border-bottom: 0.25rem solid var(--color_primary);
+        
+      }
+    }
+    .home__video-left-desc{
+      font-size: 1.3125rem;
+      text-align: center;
+      @include small-mobil{
+        font-size: 0.8125rem;
+      }
+      @include mobil{
+        font-size: 0.8125rem;
+      }
+      @include tablet{
+        font-size: 0.8125rem;
+      }
+      @include desktop{
+        font-size: 1.125rem;
+      }
+      .home__video-left-desc-iesap{
+        color: var(--color_primary);
+        font-weight: 600;
+      }
+    }
+  }
+  .home__video-rigth{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 46.25%; 
+    display: grid;
+    place-content: center;
+    @include tablet{
+      padding-top: 40.25%; 
+    }
+    .home__video-rigth-player{
+      position: absolute;
+      top: 0;
+      left: 0;
+      // @include desktop{
+      //   width: 250px;
+      // }
+    }
+  }
+}

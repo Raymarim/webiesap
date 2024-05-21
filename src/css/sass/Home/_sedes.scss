@@ -1,0 +1,97 @@
+@import './../responsive';
+
+.home__sedes{
+  width: 100%;
+  height: auto;
+  padding: 2.625rem 0;
+  background: var(--color_ligth);
+  .home__sedes-content-titulo{
+    .home__sedes-content-titulo-h2{
+      text-align: center;
+      font-size: 2.1875rem;
+      font-weight: 500;
+    }
+  }
+  .home__sedes-content{
+    padding: 1.25rem 0;
+    .home__sedes-content-sede{
+      width: 100%;
+      height: 25.125rem;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      transition: 0.4s ease-out;
+      color: var(--color_ligth);
+      @include desktop{
+        height: 22.125rem;
+      }
+      &:hover{
+        cursor: pointer;
+        &::before{
+          opacity: 1;
+        }
+        .home__sedes-content-sede-descripcion{
+          transform: translateY(-10rem);
+          opacity: 1;
+          background: none;
+        }
+      }
+      &::before{
+        content: "";
+        background: rgba(42, 42, 42, 0.537);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        display: block;
+        opacity: 0;
+        z-index: 2;
+      }
+      .home__sedes-content-sede-img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .home__sedes-content-sede-descripcion{
+        width: 100%;
+        height: auto;
+        padding: 0.625rem 0;
+        position: relative;
+        transition: .3s ease-in;
+        color: var(--color_ligth);
+        z-index: 3;
+        // background: rgba(48, 48, 93, 0.614);
+        background: rgba(53, 52, 57, 0.605);
+        // background-color: var(--color_secundary);
+        .home__sedes-content-sede-descripcion-filial{
+          font-size: 1.75rem;
+          font-weight: 300;
+          text-align: center;
+          margin-bottom: 0.3125rem;
+          padding: 0.3125rem;
+          // border-bottom: 0.0625rem solid var(--pink);
+          border-bottom: 0.0625rem solid var(--color_ligth);
+          @include desktop{
+            font-size: 1.59rem;
+          }
+        }
+        .home__sedes-content-sede-descripcion-direccion{
+          text-align: center;
+          font-size: 1.125rem;
+          min-height: 2.8125rem;
+          font-weight: 300;
+          letter-spacing: 0.05rem;
+          @include desktop{
+            font-size: .89rem;
+          }
+        }
+      }
+    }
+  }
+}

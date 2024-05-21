@@ -1,0 +1,32 @@
+.header_content{
+  font-size: 16px;
+  background-color: rgba(237, 239, 237, 0.667);
+  width: 100%;
+  padding: 0.625em 0;
+  .logo_content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    .logoiesap{
+      width: 100%;
+    }
+  }
+  .content_nav{
+    display: flex;
+    justify-content: end;
+    align-content: center;
+    .menu{
+      .lista{
+        // display: inline-block;
+        &>li{
+          display: inline-block;
+          list-style: none;
+          font-size: 1.2em;
+          padding-left: 1.8em;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

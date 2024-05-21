@@ -1,0 +1,21 @@
+.programa__servicio{
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  // border-left-color: #d10026;
+  // background: #FFF0F3;
+  .programa__servicio-content-titulo{
+    width: 100%;
+    margin-bottom: 0.8125rem;
+  }
+  .programa__servicio-content-descripcion{
+    width: 100%;
+    .programa__servicio-descripcion-lista{
+      .programa__servicio-descripcion-children{
+        line-height: 1.4375rem;
+        margin-bottom: 0.1875rem;
+        font-size: 1.0625rem;
+      }
+    }
+  }
+}

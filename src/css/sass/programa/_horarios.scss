@@ -1,0 +1,35 @@
+.programa__horarios{
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  // border-left-color: #6A00F4;
+  .programa__horarios-content-titulo{
+    width: 100%;
+    margin-bottom: 0.8125rem;
+  }
+  .programa__horarios-content-table{
+    width: 100%;
+    height: auto;
+    .programa__horarios-table{
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      // color: rgb(19, 12, 62);
+      font-weight: 300;
+      & tr > td{
+        padding: 0.625rem 1.25rem;
+      }
+      & tr td.programa__horarios-table-body-col{
+        border-right : 0.0625rem solid var(--color_primary);
+      }
+      .programa__horarios-table-body-head{
+        background-color: var(--color_primary);
+        color: var(--color_ligth);
+        font-size: 1.1875rem;
+        .programa__horarios-table-body-col{
+          border-right : 0.125rem solid var(--color_ligth);
+        }
+      }
+    }
+  }
+}

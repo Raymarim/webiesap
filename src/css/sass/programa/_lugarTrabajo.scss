@@ -1,0 +1,21 @@
+.programa__lugartrabajo {
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  // border-left-color: #8900F2;
+
+  .programa__lugartrabajo-content-titulo{
+    width: 100%;
+    margin-bottom: 0.8125rem;
+  }
+  .programa__lugartrabajo-content-descripcion{
+    width: 100%;
+    .programa__lugartrabajo-descripcion-lista{
+      .programa__lugartrabajo-descripcion-lista-children{
+        line-height: 1.4375rem;
+        margin-bottom: 0.1875rem;
+        font-size: 1.0625rem;
+      }
+    }
+  }
+}

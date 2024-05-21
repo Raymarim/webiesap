@@ -1,0 +1,103 @@
+@import './../responsive';
+
+.programa__banner{
+  width: 100%;
+  height: 25rem;
+  position: relative;
+  z-index: 21;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  // &::before{
+  //   content: "";
+  //   position: absolute;
+  //   width: 50%;
+  //   height: 100%;
+  //   background: linear-gradient(90deg, rgba(29, 29, 29, 0.537) 0%, rgba(78, 77, 81, 0.449) 51%, rgba(76, 74, 74, 0.004) 100%);
+  //   z-index: 22;
+  // }
+  .programa__banner-content-img{
+    width: 100%;
+    height: 100%;
+    .programa__banner-img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .programa__banner-descripcion{
+    width: 48%;
+    height: auto;
+    position: absolute;
+    padding: 0.625rem 1.25rem;
+    z-index: 23;
+    color: var(--color_ligth);
+    top: 13.75rem;
+    left: 7.25rem;
+    @include small-mobil{
+      width: 50%;
+      top: 2.75rem;
+      left: 0.05rem;
+    }
+    @include tablet{
+      width: 50%;
+      top: 4.75rem;
+      left: 0.25rem;
+    }
+    @include desktop{
+      width: 50%;
+      top: 9.75rem;
+      left: 1.25rem;
+    }
+    @include large{
+      width: 50%;
+      top: 14.99rem;
+      left: 1.25rem;
+    }
+    &::before{
+      content: "";
+      top: 0;
+      border-left: 0.1875rem solid var(--color_ligth);
+      height: 100%;
+      position: absolute;
+    }
+    .programa__banner-programa{
+      font-size: 1.7175rem;
+      font-weight: 500;
+      margin-left: 0.9375rem;
+      line-height: 1.8875rem;
+      margin-bottom: 0.325rem;
+      @include small-mobil{
+        font-size: 0.9875rem;
+        line-height: 1.5875rem;
+      }
+      @include mobil{
+        font-size: 1.1875rem;
+        line-height: 1.5875rem;
+      }
+      @include tablet{
+        font-size: 1.7875rem;
+        line-height: 1.9875rem;
+      }
+    }
+    .programa__banner-detalle{
+      margin-left: 0.9375rem;
+      padding-right: 60px;
+      line-height: 1.375rem;
+      text-align: justify;
+      font-weight: 300;
+      @include small-mobil{
+        font-size: 0.8rem;
+        line-height: 1.295rem;
+        text-align: left;
+        padding-right: 0.0625rem;
+      }
+      @include mobil{
+        font-size: 0.8rem;
+        line-height: 1.295rem;
+        text-align: left;
+        padding-right: 0.0625rem;
+      }
+    }
+  }
+}

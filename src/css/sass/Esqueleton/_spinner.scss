@@ -1,0 +1,25 @@
+.spinner{
+  width: 3.125rem;
+  height: 3.125rem;
+
+  &::after{
+    content: "";
+    display: inline-flex;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    margin: 0 0.25rem;
+    border-radius: 50%;
+    border: 0.125rem solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: spinner 1.2s linear infinite;
+  }
+}
+
+@keyframes spinner{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

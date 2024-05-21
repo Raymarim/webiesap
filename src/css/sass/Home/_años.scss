@@ -1,0 +1,26 @@
+@import './../../sass/_responsive.scss';
+
+.home__anios{
+  width: 100%;
+  height: 25.625rem;
+  background-color: rgb(252, 255, 255);
+  position: relative;
+
+  @include small-mobil{
+    height: 12.625rem;
+  }
+  @include mobil{
+    height: 12.625rem;
+  }
+  .home__anios-content-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .home__anios-img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

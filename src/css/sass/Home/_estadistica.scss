@@ -1,0 +1,183 @@
+@import './../responsive';
+
+.home__estadistica{
+  width: 100%;
+  height: 23.75rem;
+  padding: 0.9375rem 0;
+  background: var(--color_ligth);
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  @include tablet{
+    height: 30.75rem;
+  }
+  .home__estadistica-items{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;  
+    justify-content: space-evenly;
+
+    @include small-mobil{
+      display: flex;
+      justify-content: center;
+    }
+    @include mobil{
+      display: flex;
+      justify-content: center;
+    }
+    @include tablet{
+      display: flex;
+      justify-content: center;
+    }
+    .home__estadistica-item{
+      width: 15.625rem;
+      height: 15.625rem;
+      padding: 0.3125rem 0.625rem;
+      margin: 0 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.9375rem;
+      box-shadow: rgba(57, 50, 50, 0.2) 0rem 0.5rem 1.5rem;
+      transition: transform .2s ease-in-out;
+      &:hover{
+        transform: scale(1.05);
+      }
+      @include small-mobil{
+        width: 10.625rem;
+        height: 10.625rem;
+        padding: 0.3125rem 0.625rem;
+      }
+      @include mobil{
+        width: 13.625rem;
+        height: 13.625rem;
+        padding: 0.3125rem 0.625rem;
+      }
+      @include tablet{
+        width: 13.625rem;
+        height: 13.625rem;
+        padding: 0.6125rem 0.625rem;
+        margin: 0.625rem 0.5rem;
+      }
+      @include desktop{
+        width: 14.625rem;
+        height: 14.625rem;
+        &:hover{
+          transform: scale(1.02);
+        }
+      }
+      .home__estadistica-item-content-icon{
+        width: 5.3125rem;
+        height: 5.3125rem;
+        background-color: var(--color_ligth);
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        margin-bottom: 0.5rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.4375rem 1.8125rem 0rem;
+        @include small-mobil{
+          width: 3.3125rem;
+          height: 3.3125rem;
+        }
+        @include mobil{
+          width: 4.3125rem;
+          height: 4.3125rem;
+        }
+        @include tablet{
+          width: 4.3125rem;
+          height: 4.3125rem;
+        }
+        .home__estadistica-item-icon{
+          // width: 65px;
+          // height: 45px;
+          color: #FF416C;
+          font-size: 2.8125rem;
+          @include small-mobil{
+            font-size: 1.9125rem;
+          }
+          @include mobil{
+            font-size: 2.2125rem;
+          }
+          @include tablet{
+            font-size: 2.2125rem;
+          }
+        }
+      }
+      .home__estadistica-item-numero{
+        font-size: 2.1875rem;
+        margin-bottom: 0.3125rem;
+        @include small-mobil{
+          font-size: 1.4875rem;
+        }
+        @include mobil{
+          font-size: 1.4875rem;
+        }
+        @include tablet{
+          font-size: 1.4875rem;
+        }
+        @include desktop{
+          font-size: 1.7875rem;
+        }
+      }
+      .home__estadistica-item-title{
+        font-size: 1.3125rem;
+        @include small-mobil{
+          font-size: 0.9125rem;
+        }
+        @include mobil{
+          font-size: 1.125rem;
+        }
+        @include tablet{
+          font-size: 0.925rem;
+        }
+        @include desktop{
+          font-size: 1.225rem;
+        }
+      }
+    }
+  }
+  // .home__estadistica-content{
+  //   width: 100%;
+  //   height: auto;
+  //   padding: 15px;
+  //   text-align: center;
+  //   color: var(--color_ligth);
+  //   .home__estadistica-content-egresados{
+  //     font-size: 45px;
+  //     font-weight: 300;
+  //     margin-bottom: 5px;
+  //   }
+  //   .home__estadistica-content-titulados{
+  //     font-size: 35px;
+  //     font-weight: 300;
+  //     margin-bottom: 5px;
+  //   }
+  //   .home__estadistica-content-laborando{
+  //     font-size: 30px;
+  //     font-weight: 300;
+  //     margin-bottom: 5px;
+  //   }
+  //   .home__estadistica-content-descripcion{
+  //     font-size: 22px;
+  //     font-weight: 300;
+  //     margin-bottom: 5px;
+  //   }
+  //   .home__estadistica-content-matriculate{
+  //     width: 100%;
+  //     padding: 20px 0;
+  //     .home__estadistica-content-enlace{
+  //       padding: 8px 45px;
+  //       background-color: #FF416C;
+  //       color: var(--color_ligth);
+  //       border-radius: 20px;
+  //       font-size: 20px;
+  //       &:hover{
+  //         transition:all .3s ease;
+  //         background-color: #ec1d4e;
+  //       }
+  //     }
+  //   }
+  // }
+}

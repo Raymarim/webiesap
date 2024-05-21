@@ -1,0 +1,102 @@
+.transparencia__documentacion{
+  width: 100%;
+  
+  .transparencia__documentacion-container{
+    width: 100%;
+    height: auto;
+    padding: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+
+    .transparencia__documentacion-content-title{
+      width: 100%;
+      height: auto;
+      padding: 10px 0;
+      background-color: var(--color_primary);
+      text-align: center;
+
+      .transparencia__documentacion-title{
+        font-size: 28px;
+        font-weight: 400;
+        color: var(--color_ligth);
+      }
+    }
+
+    .transparencia__documentacion-list{
+      width: 100%;
+      height: auto;
+
+      .transparencia__documentacion-list-table{
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #dfdada;
+
+        & > tbody tr td{
+          border: 1px solid #dfdada;;
+          font-size: 16px;
+          padding: 7px 20px;
+          border-collapse: collapse;
+          color: rgba(0, 0, 0, 0.836);
+        }
+        & > tbody tr:nth-child(odd){
+          background: #f5f3f4;
+          
+        }
+        & > tbody tr:nth-child(even){
+          background: #fff;
+        }
+
+        & > tbody tr.transparencia__documentacion-list-table-titulo{
+          background: #F5F5FF;
+          & > td{
+            font-size: 20px;
+            font-weight: 400;
+            padding: 11px 20px;
+            color: rgb(32, 33, 33);
+          }
+        }
+
+        & > tbody tr:not(:first-child){
+          &:hover{
+            background: #fdffb6;
+            cursor: pointer;
+            transition: background .2s ease-in;
+            & > td{
+              color: #000;
+              font-weight: 400;
+            }
+          }
+        }
+
+        & > tbody tr .transparencia__documentacion-list-table-body-download{
+          width: 160px;
+          padding: 5px 20px;
+          background: var(--blue);
+          color: var(--color_ligth);
+          border-radius: 15px;
+          font-weight: 400;
+          transition: background .2s ease-out;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+
+          &:hover{
+            background: var(--indigo);
+          }
+        }
+
+        & > tbody tr.transparencia__documentacion-list-table-sinresultados{
+          & td{
+            text-align: center;
+            
+          }
+
+        }
+      }
+    }
+  }
+}

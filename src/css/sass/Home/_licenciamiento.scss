@@ -1,0 +1,180 @@
+@import "./../responsive";
+
+.home__licenciamiento{
+  width: 100%;
+  height: auto;
+  background: #e5e2e2;
+
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  &::before{
+    content: "";
+    width: 63%;
+    height: 53.125rem;
+    background: #eb545450;
+    border-radius: 0 50% 50% 0;
+    position: absolute;
+    left: 0rem;
+    top: -9.375rem;
+    z-index: 2;
+
+    @include small-mobil{
+      width: 65%;
+      height: 19.6875rem;
+      top: -2.0625rem;
+    }
+    @include mobil{
+      width: 65%;
+      height: 21.875rem;
+      top: -2.1875rem;
+    }
+    @include tablet{
+      width: 65%;
+      height: 34.375rem;
+      top: -4.0625rem;
+    }
+  }
+
+  &::after{
+    content: "";
+    width: 60%;
+    height: 53.125rem;
+    background: #fb0f0f;
+    border-radius: 0 50% 50% 0;
+    position: absolute;
+    left: 0;
+    top: -9.375rem;
+    z-index:3;
+
+    @include small-mobil{
+      width: 62%;
+      height: 19.6875rem;
+      top: -2.0625rem;
+    }
+    @include mobil{
+      width: 62%;
+      height: 21.875rem;
+      top: -2.1875rem;
+    }
+    @include tablet{
+      width: 62%;
+      height: 34.375rem;
+      top: -4.0625rem;
+    }
+  }
+  
+  .home__licenciamiento_bandel_text,
+  .home__licenciamiento_bandel_picture{
+    width: 100%;
+    height: 34.375rem;
+    display: grid;
+    place-content: center;
+
+    @include small-mobil{
+      height: 15.625rem;
+    }
+    @include mobil{
+      height: 16.875rem;
+    }
+    @include tablet{
+      height: 26.25rem;
+    }
+    @include desktop{
+      height: 31.25rem;
+    }
+
+  }
+
+  .home__licenciamiento_bandel_text{
+    padding-left: 5.3125rem;
+
+    @include small-mobil{
+      padding-left: 0.625rem;
+    }
+    @include mobil{
+      padding-left: 0;
+    }
+    .home__licenciamiento_text{
+      font-size: 3.125rem;
+      text-align: center;
+      color: var(--color_ligth);
+      z-index: 5;
+
+      @include small-mobil{
+        font-size: 0.875rem;
+      }
+      @include mobil{
+        font-size: 1.125rem;
+      }
+      @include tablet{
+        font-size: 2.1875rem;
+      }
+      @include desktop{
+        font-size: 3.125rem;
+      }
+    }
+  }
+
+  .home__licenciamiento_bandel_picture{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #252424, #d7bdaf39), url('./../../../../public/assets/img/home/0b2e41565992d14173c4771ff758f2dbbc4a5d28.jpg');
+    padding-left: 7.8125rem;
+
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.1875rem;
+
+    @include small-mobil{
+      padding-left: 0.75rem;
+      gap: 0.5625rem;
+    }
+    @include mobil{
+      padding-left: 4.0625rem;
+    }
+    .home__licenciamiento_bandel_picture_lnk{
+      width: 24.6875rem;
+      padding: 0.9375rem 1.5625rem;
+      font-size: 1.75rem;
+      color: var(--color_ligth);
+      font-weight: 500;
+      border: 0.0625rem solid var(--color_ligth);
+      border-radius: 0.3125rem;
+      transition: background ease .6s;
+
+      display: grid;
+      place-content: center;
+
+      @include small-mobil{
+        width: 5.3125rem;
+        font-size: 0.75rem;
+        padding: 0.3125rem 0.3125rem;
+        text-align: center;
+      }
+      @include mobil{
+        width: 11.5625rem;
+        font-size: 0.9375rem;
+        padding: 0.5rem 0.9375rem;
+      }
+      @include tablet{
+        width: 14.6875rem;
+        font-size: 1.125rem;
+      }
+
+      @include desktop{
+        width: 19.6875rem;
+        font-size: 1.4375rem;
+      }
+      &:hover{
+        background: #fff;
+        color: var(--color_dark);
+        border: 0.0625rem solid transparent;
+        transition: background ease-out .6s;
+      }
+    }
+  }
+}

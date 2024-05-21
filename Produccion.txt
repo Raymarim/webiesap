@@ -1,0 +1,13 @@
+PRODUCCTION
+
+****************
+HOMEPAGE
+https://ifesit.com/webiesap/
+
+**************
+API WEB OK
+REACT_APP_BASEURL = https://ifesit.com/iesap/
+
+
+Local
+REACT_APP_BASEURL = http://localhost/sgc/

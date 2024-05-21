@@ -1,0 +1,48 @@
+@import './../responsive';
+
+.error404_page{
+  width: 100%;
+  height: 37.5rem;
+  padding: 1.875rem;
+  background-color: rgb(250, 250, 251);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .error404_page-home{
+    width: 100%;
+    height: auto;
+    padding: 3.125rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.4375rem 1.8125rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include small-mobil{
+      padding: 1.25rem;
+    }
+    .error404_page-home-picture{
+
+      object-fit: cover;
+    }
+    .error404_page-home-content-icon{
+      font-size: 6.75rem;
+      @include small-mobil{
+        font-size: 3.75rem;
+      }
+    }
+    .error404_page-home-title{
+      font-size: 2.8125rem;
+      font-weight: 500;
+      color: rgb(64, 64, 65);
+      margin-bottom: 0.625rem;
+      @include small-mobil{
+        font-size: 1.25rem;
+      }
+    }
+    p{
+      @include small-mobil{
+        font-size: 0.875rem;
+      }
+    }
+  } 
+}

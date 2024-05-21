@@ -1,0 +1,115 @@
+.galery__albun{
+  width: 100%;
+  height: auto;
+  padding: 2.8125rem 0;
+  background: var(--color_ligth);
+  
+  .galery__albun_cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .galery__albun_card{
+      width: 31.375rem;
+      height: 22.5rem;
+      border-radius: 0.625rem;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow .3s ease-out;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      &:hover{
+        box-shadow: rgba(20, 20, 20, 0.537) 0rem 0.3125rem 0.9375rem;
+        .galery__albun_card_content_title{
+          background: var(--pink);
+          & .galery__albun_card_icon{
+            opacity: 1;
+          }
+          & .galery__albun_card_title{
+            opacity: 1;
+          } 
+        }
+        &::after{
+          background: var(--color_ligth);
+          color: var(--color_dark);
+        }
+      }
+      
+      &::after{
+        content: "✓";
+        width: 1.875rem;
+        height: 1.875rem;
+        position: absolute;
+        left: -0.125rem;
+        top: -0.125rem;
+        font-weight: 700;
+        background: #edecec;
+        color: #000000b8;
+        border-radius: 50%;
+        transition: background .4s ease-in;
+
+        display: grid;
+        place-content: center;
+      }
+
+      .galery__albun_card_content_picture{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 18.75rem;
+        .galery__albun_card_picture{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .galery__albun_card_content_title{
+        width: 100%;
+        height: 3.75rem;
+        position: absolute;
+        z-index: 921;
+        color: var(--color_ligth);
+        background: var(--color_primary);
+        transition: background .3s ease-out;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3125rem;
+
+        .galery__albun_card_icon{
+          font-size: 1.75rem;
+          opacity: .9;
+        }
+        .galery__albun_card_title{
+          font-size: 1.325rem;
+          font-weight: 400;
+          letter-spacing: 0.0187rem;
+          opacity: .9;
+        }
+      }
+    }
+  }
+
+  .galery__albun-result{
+    width: 100%;
+    height: 28.125rem;
+    background: #ece9e638; 
+    box-shadow: rgba(149, 157, 165, 0.2) 0rem 0.5rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3125rem;
+
+    .galery__albun-result-title{
+      font-size: 1.375rem;
+      font-weight: 400;
+      color: #242424;
+    }
+  }
+
+}

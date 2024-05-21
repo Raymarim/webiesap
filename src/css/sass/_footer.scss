@@ -1,0 +1,303 @@
+@import './responsive';
+
+.entidades__interes{
+  width: 100%;
+  height: auto;
+  padding: 0.9375rem 0;
+  background:  #FAFAFF;
+
+  .entidades__importantes-content-title{
+    width: 100%;
+    height: auto;
+    background: #0575E6; 
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6); 
+    background: linear-gradient(to right, #021B79, #0575E6);
+
+    .entidades__importantes_title{
+      font-size: 1.8125rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 0.9375rem;
+      color: var(--color_ligth);
+      padding: 0.625rem 0;
+      letter-spacing: 0.025rem;
+    }
+  }
+  .entidad__content{
+    width: 15.9375rem;
+    height: auto;
+    margin: 0 auto 0.9375rem;
+    background: #c9cbcbed;
+    position: relative;
+    z-index: 92;
+    overflow: hidden;
+
+    &::after{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: -15.625rem;
+      background: #7339e7;
+      top: 0;
+      z-index: -1;
+      transition: left .6s ease-in-out;
+    }
+    &:hover::after{
+      left: 0;
+      transition: left .6s ease-in-out;
+    }
+    .entidad__picture{
+      max-width: 100%;
+      height: auto;
+    }
+    
+  }
+}
+
+.footer__iesap{
+  background: #303649;
+  padding-top: 1.5625rem;
+  position: relative;
+  height: auto;
+  .footer__iesap-img-svg{
+    position: absolute;
+    width: 100%;
+    height: 3.125rem;
+    bottom: 0;
+    z-index: 2;
+  }
+  .footer__iesap-programas{
+    width: 100%;
+    height: auto;
+    padding: 0 1.875rem;
+    .footer__iesap-programas-titulo{
+      width: 100%;
+      color: var(--color_ligth);
+      font-weight: 300;
+      font-size: 1.375rem;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    .footer__iesap-programas-lista{
+      padding: 0.5rem;
+      position: relative;
+      margin-left: 0.9375rem;
+      &::before{
+        content: "";
+        position: absolute;
+        height: 95%;
+        border-left: 0.0625rem solid #ff0000;
+        top: 0;
+        left: 0;
+      }
+      .footer__iesap-programas-ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        .footer__iesap-programas-li{
+          margin-bottom: 0.625rem;
+          
+          .footer__iesap-programas-link{
+            // margin-left: 0.625rem;
+            color: rgb(238, 228, 228);
+            font-weight: 300;
+            line-height: 1.25rem;
+            &:hover{
+              color: #7be9d1;
+              transition: .2s ease-in;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer__iesap-filiales{
+    width: 100%;
+    height: auto;
+    padding: 0 1.875rem;
+    .footer__iesap-filiales-titulo{
+      color: var(--color_ligth);
+      font-weight: 300;
+      font-size: 1.375rem;
+      margin-bottom: 0.75rem;
+    }
+    .footer__iesap-filiales-lista{
+      padding: 0.5rem;
+      position: relative;
+      margin-left: 0.9375rem;
+      &::before{
+        content: "";
+        position: absolute;
+        height: 95%;
+        border-left: 0.0625rem solid #ff0000;
+        top: 0;
+        left: 0;
+      }
+      .footer__iesap-filiales-ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        .footer__iesap-filiales-li{
+          margin-bottom: 0.625rem;
+          z-index: 913;
+          position: relative;
+          .footer__iesap-filiales-link{
+            color: rgb(238, 228, 228);
+            font-weight: 300;
+            &:hover{
+              color: #7be9d1;
+              transition: .2s ease-in;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer__iesap-redes-content{
+    padding: 0.9375rem 0;
+    .footer__iesap-redes-siguenos{
+      display: flex;
+      justify-content: center;
+      span{
+        color: var(--color_ligth);
+        font-size: 1.125rem;
+        font-weight: 300;
+      }
+    }
+    .footer__iesap-redes{
+      width: 100%;
+      height: auto;
+      padding: 0.625rem 0;
+      display: flex;
+      justify-content: center;
+      .footer__iesap-redes-siguenos{
+        color: var(--color_ligth);
+        font-size: 1.3125rem;
+      }
+      .footer__iesap-redes-icons{
+        display: flex;
+        column-gap: 1.5625rem;
+        z-index: 914;
+        .footer__iesap-redes-enlace{
+          margin: 0 0.5625rem;
+          color: var(--color_ligth);
+          width: 3.4375rem;
+          height: 3.4375rem;
+          font-size: 1.625rem;
+          border-radius: 50%;
+          border: 0.125rem solid var(--color_ligth);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          transition: .3s ease-in;
+          &:hover{
+            border: 0.1875rem solid var(--color_ligth);
+            animation: aminate_redes .25s;
+            &.footer__iesap-redes-icon{
+              transition: all .2s ease-in-out;
+            }
+          }
+        }
+        .icon--facebook:hover{
+          background-color: #1877f2;
+          border: 0.0625rem solid #1877f2;
+        }
+        .icon--youtube:hover{
+          background-color: #ff0000;
+          border: 0.0625rem solid #ff0000;
+        }
+        .icon--instagran:hover{
+          background: #d6249f;
+          background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+          border: 0.0625rem solid #a02d76;
+        }
+        .icon--tiktok:hover{
+          background: rgb(0,255,248);
+          background: radial-gradient(circle, rgba(0,255,248,1) 0%, rgba(33,33,37,1) 50%, rgba(255,0,16,1) 100%);
+          border: 0.0625rem solid rgb(0,255,248);
+        }
+      }
+    }
+  }
+  .footer__iesap-content-logo{
+    width: 100%;
+    padding: 0.9375rem 0;
+    display: flex;
+    justify-content: center;
+    .footer__iesap-logo{
+      width: 21.875rem;
+      z-index: 9;
+      margin-top: 1.25rem;
+      .footer__iesap-logo-img{
+        width: 100%;
+        height: 100%;
+        z-index: 916;
+      }
+    }
+  }
+}
+.footer__iesap-copyright{
+  width: 100%;
+  height: auto;
+  background: #16161df8;
+  padding: 1rem 0;
+  text-align: center;
+  .footer__iesap-copyright-titulo{
+    color: var(--color_ligth);
+    font-weight: 300;
+  }
+}
+
+.footer__iesap-dev{
+  width: 100%;
+  height: 6.25rem;
+  background: #16161d;
+  padding: 0.9375rem 0;
+
+  @include small-mobil{
+    height: 10.625rem;
+  }
+  @include mobil{
+    height: 10.625rem;
+  }
+  @include tablet{
+    height: 6.25rem;
+  }
+  .footer__iesap-dev-titulo{
+    width: 100%;
+    margin-right: -17.5rem;
+    text-align: right;
+    color: var(--color_ligth);
+    letter-spacing: 0.025rem;
+    font-size: 0.9375rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    gap: 0.3125rem;
+
+    @include small-mobil{
+      font-size: 0.875rem;
+      gap: 0.1875rem;
+    }
+
+  }
+  .footer__iesap-dev-lnk{
+    color: #14ee47;
+    text-decoration: underline;
+    transition: .2s color ease-in;
+
+    &:hover{
+      color: #8cf7a5;
+      transition: .2s color ease-in;
+    }
+  }
+}
+
+@keyframes aminate_redes{
+  10%{ transform: rotate(15deg); }
+  20%{ transform: rotate(-15deg); }
+  30%{ transform: rotate(15deg); }
+  40%{ transform: rotate(-15deg); }
+}
