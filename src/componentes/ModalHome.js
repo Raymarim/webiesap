@@ -1,4 +1,5 @@
 import React,{ useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom';
 import Modal from 'react-modal';
 import './../css/sass/_modalHome.scss';
 import { AiOutlineCloseCircle, AiOutlineAlignLeft  } from "react-icons/ai";
@@ -7,18 +8,35 @@ Modal.setAppElement('#root');
 const ModalHome = () => {
 
     const [ modalIsOpen, setModalIsOpen ] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         setModalIsOpen(true);
+        // console.log(location);
+        getUrlCurrent()
     }, []);
 
     const onCloseModal = () =>{
         setModalIsOpen(false);
+        getUrlCurrent();
     }
+
+    const getUrlCurrent = () => {
+      const directorios = window.location.pathname.split('/');
+
+      const filterDirectorios = directorios.filter( dir => {
+        return !dir.includes('-') && !dir.includes('_') && !dir.includes('=');
+      })
+
+      const countDir = filterDirectorios.length;
+      const relativePath  = '../'.repeat(countDir);
+      return `${relativePath}assets/files/documentacion/plan_de_cese_de_actividades_educativas.pdf`;
+    }
+
 
     return ( 
         <>
-            <Modal
+          <Modal
             isOpen={modalIsOpen}
             onRequestClose={onCloseModal}
             contentLabel='Modal de bienvenida'
@@ -47,7 +65,7 @@ const ModalHome = () => {
               <span onClick={onCloseModal}> <AiOutlineCloseCircle style={{ color: 'red' }}/></span>
             </div>
             <iframe
-              src="../assets/files/documentacion/plan_de_cese_de_actividades_educativas.pdf"
+              src={`${getUrlCurrent()}`}
               width="100%"
               height="100%"
               title="PDF Document"

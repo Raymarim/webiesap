@@ -26,7 +26,7 @@ import Footer from './componentes/Footer';
 import Error404 from './componentes/Error404/Error404';
 import Social from './componentes/Social';
 import UseRedesSociales from './Hooks/useRedesSociales';
-import ModalHome from './componentes/ModalHome';
+// import ModalHome from './componentes/ModalHome';
 
 import moment from 'moment/moment';
 import 'moment/locale/es';
@@ -146,7 +146,7 @@ const App = () => {
         <ScrollToTop />
         <HelmetProvider>
           
-          <ModalHome />
+          {/*<ModalHome />*/}
           {/* <Modal
             isOpen={modalIsOpen}
             onRequestClose={onCloseModal}

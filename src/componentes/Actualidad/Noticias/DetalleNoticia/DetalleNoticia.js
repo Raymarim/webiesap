@@ -157,6 +157,11 @@ const DetalleNoticia = ({subdominio, codfilial, filial, tabName}) => {
                                       return(
                                         <DetalleNoticiaImagen url_base={url_base} picture={det.desp}/>
                                       )
+                                    }else if(keytype === 'NA=='){
+                                      // ?titulo
+                                      return(
+                                        <h3 className='detalle__noticia-titulo'>{det.desp}</h3>
+                                      )
                                     }else if(keytype === 'NQ=='){
                                       // ?subtitulo
                                       return(
@@ -166,6 +171,7 @@ const DetalleNoticia = ({subdominio, codfilial, filial, tabName}) => {
                                       // ?lista
                                       return(
                                         <DetalleNoticiaLista coddetalle={det.keynd}/>
+                                        
                                       )
                                     }else if(keytype === 'Ng=='){
                                       // ?bloque
